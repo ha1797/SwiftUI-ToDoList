@@ -5,6 +5,7 @@
 //  Created by Hoja Arzanesh on 6/14/24.
 //
 
+import FirebaseCore
 import SwiftUI
 
 @main
