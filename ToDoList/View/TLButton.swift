@@ -13,7 +13,17 @@ struct TLButton: View {
     let action: () -> Void
     
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Button(action: action, label: {
+            ZStack {
+                RoundedRectangle(cornerRadius: 10)
+                    .foregroundColor(backgroundColor)
+                
+                Text(title)
+                    .foregroundStyle(Color.white)
+                    .bold()
+            }
+        })
+        .padding()
     }
 }
 
