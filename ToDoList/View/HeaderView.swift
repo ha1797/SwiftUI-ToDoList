@@ -14,7 +14,13 @@ struct HeaderView: View {
     let backgroundColor: Color
     
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ZStack {
+            RoundedRectangle(cornerRadius: 0)
+                .foregroundColor(backgroundColor)
+                .rotationEffect(Angle(degrees: angle))
+        }
+        .frame(width: UIScreen.main.bounds.width*3, height: 350)
+        .offset(y: -150)
     }
 }
 
