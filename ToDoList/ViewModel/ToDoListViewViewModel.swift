@@ -10,5 +10,8 @@ import Foundation
 
 class ToDoListViewViewModel: ObservableObject {
     
+    @Published var showingNewItemView = false
+    private let userId: String
+    
     
 }
