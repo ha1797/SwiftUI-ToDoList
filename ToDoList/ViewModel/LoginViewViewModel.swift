@@ -10,5 +10,8 @@ import Foundation
 
 class LoginViewViewModel: ObservableObject {
     
+    @Published var email = ""
+    @Published var password = ""
+    @Published var errorMessage = ""
     
 }
