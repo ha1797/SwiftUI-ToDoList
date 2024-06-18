@@ -11,5 +11,7 @@ import Foundation
 
 class ProfileViewViewModel: ObservableObject {
     
+    @Published var user: User? = nil
+    
     
 }
