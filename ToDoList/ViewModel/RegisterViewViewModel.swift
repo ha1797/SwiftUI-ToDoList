@@ -18,5 +18,27 @@ class RegisterViewViewModel: ObservableObject {
     
     init() {}
     
-    
+    private func validate() -> Bool {
+        
+        errorMessage = ""
+        
+        guard !fullName.trimmingCharacters(in: .whitespaces).isEmpty,
+              !email.trimmingCharacters(in: .whitespaces).isEmpty,
+              !password.trimmingCharacters(in: .whitespaces).isEmpty else {
+            
+            errorMessage = "Please fill in all fields."
+            return false
+        }
+        
+        guard email.contains("@") && email.contains(".") else {
+            errorMessage = "Please enter a valid email."
+            return false
+        }
+        
+        guard password.count >= 6 else {
+            return false
+        }
+        
+        return true
+    }
 }
