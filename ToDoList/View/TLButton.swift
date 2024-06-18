@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct TLButton: View {
-<<<<<<< HEAD
     let title: String
     let backgroundColor: Color
     let action: () -> Void
@@ -25,17 +24,9 @@ struct TLButton: View {
             }
         })
         .padding()
-=======
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
->>>>>>> main
     }
 }
 
 #Preview {
-<<<<<<< HEAD
     TLButton(title: "title", backgroundColor: .blue, action: {/* action */})
-=======
-    TLButton()
->>>>>>> main
 }
