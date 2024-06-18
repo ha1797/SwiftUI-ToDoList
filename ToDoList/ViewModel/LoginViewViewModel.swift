@@ -16,6 +16,15 @@ class LoginViewViewModel: ObservableObject {
     
     init() {}
     
+    func login() {
+        
+        guard validate() else {
+            return
+        }
+        
+        Auth.auth().signIn(withEmail: email, password: password)
+    }
+    
     func validate() -> Bool {
         
         errorMessage = ""
