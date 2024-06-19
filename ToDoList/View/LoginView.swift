@@ -16,6 +16,26 @@ struct LoginView: View {
             
             VStack {
                 HeaderView(title: "To Do List", subTitle: "Get Things Done", angle: 15, backgroundColor: .pink)
+            
+                Form {
+                    if !viewModel.errorMessage.isEmpty {
+                        Text(viewModel.errorMessage).foregroundStyle(Color.red)
+                    }
+                    
+                    TextField("Email Address", text: $viewModel.email)
+                        .textFieldStyle(DefaultTextFieldStyle())
+                    TextField("Password", text: $viewModel.password)
+                        .textFieldStyle(DefaultTextFieldStyle())
+                    
+                    // TLButton here once code available
+                    /*
+                     TLButton(
+                     title: "Log In",
+                     backgroundColor: .blue
+                     action: { viewModel.login() }
+                     )
+                     */
+                }
             }
         }
     }
