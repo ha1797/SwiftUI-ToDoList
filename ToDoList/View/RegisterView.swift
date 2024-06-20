@@ -12,7 +12,28 @@ struct RegisterView: View {
     @StateObject var viewModel = RegisterViewViewModel()
     
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            
+            // Header
+            HeaderView(title: "Register", subTitle: "Start Organizing ToDos", angle: -15, backgroundColor: .orange)
+            
+            Form {
+                TextField("Full Name", text: $viewModel.fullName)
+                    .textFieldStyle(DefaultTextFieldStyle())
+                TextField("Email Address", text: $viewModel.email)
+                    .textFieldStyle(DefaultTextFieldStyle())
+                TextField("Password", text: $viewModel.password)
+                    .textFieldStyle(DefaultTextFieldStyle())
+                
+//                TLButton(
+//                    title: "Create Account",
+//                    backgroundColor: .green,
+//                    action: { viewModel.register() }
+//                )
+            }
+            
+            Spacer()
+        }
     }
 }
 
