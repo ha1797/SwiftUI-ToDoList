@@ -36,6 +36,14 @@ struct LoginView: View {
                      )
                      */
                 }
+                
+                VStack {
+                    Text("New around here?")
+                    NavigationLink("Create An Account", destination: RegisterView())
+                }
+                .padding(.bottom, 50)
+                
+                Spacer()
             }
         }
     }
