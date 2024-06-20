@@ -18,5 +18,7 @@ struct NewItemView: View {
 }
 
 #Preview {
-    NewItemView()
+    NewItemView(newItemPresented: Binding(get: {
+        return true
+    }, set: { _ in }))
 }
