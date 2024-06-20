@@ -13,7 +13,24 @@ struct ToDoListItemView: View {
 //    let item: ToDoListItem
     
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        HStack {
+            VStack(alignment: .leading) {
+//                Text(item.title)
+//                    .font(.body)
+//                Text("\(Date(timeIntervalSince1970: item.dueDate).formatted(date: .abbreviated, time: .shortened))")
+//                    .font(.footnote)
+//                    .foregroundStyle(Color(.secondaryLabel))
+            }
+            
+            Spacer()
+            
+            Button(action: {
+//                viewModel.toggleIsDone(item: item)
+            }, label: {
+//                Image(systemName: item.isDone ? "checkmark.circle.fill" : "circle")
+//                    .foregroundStyle(Color.blue)
+            })
+        }
     }
 }
 
