@@ -12,12 +12,24 @@ struct ProfileView: View {
     @StateObject var viewModel = ProfileViewViewModel()
     
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationStack {
+            VStack {
+                if let user = viewModel.user {
+//                    profile(user: user)
+                } else {
+                    Text("Loading Profile...")
+                }
+            }
+            .navigationTitle("Profile")
+        }
+        .onAppear {
+            viewModel.fetchUser()
+        }
     }
     
 //    @ViewBuilder
-//    func profile(user: User) -< some View {
-//        
+//    func profile(user: User) -> some View {
+//
 //        // Avatar
 //        Image(systemName: "person.circle")
 //            .resizable()
