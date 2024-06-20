@@ -15,6 +15,8 @@ class NewItemViewViewModel: ObservableObject {
     @Published var dueDate = Date()
     @Published var showAlert = false
     
+    init() {}
+    
     func canSave() -> Bool {
         guard !title.trimmingCharacters(in: .whitespaces).isEmpty else {
             return false
