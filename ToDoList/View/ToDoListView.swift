@@ -19,7 +19,32 @@ struct ToDoListView: View {
     }
     
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationStack {
+            VStack {
+//                List(items) { item in
+//                    ToDoListItemView(item: item)
+//                        .swipeActions(
+//                            content: {
+//                                Button("Delete") {
+//                                    viewModel.delete(item: item)
+//                                }
+//                                .tint(.red)
+//                            })
+//                }
+//                .listStyle(PlainListStyle())
+            }
+            .navigationTitle("To Do List")
+            .toolbar {
+                Button {
+                    viewModel.showingNewItemView = true
+                } label: {
+                    Image(systemName: "plus")
+                }
+            }
+            .sheet(isPresented: $viewModel.showingNewItemView) {
+//                NewItemView(newItemPresented: $viewModel.showingNewItemView)
+            }
+        }
     }
 }
 
