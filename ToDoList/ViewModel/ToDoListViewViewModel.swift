@@ -17,5 +17,13 @@ class ToDoListViewViewModel: ObservableObject {
         self.userId = userId
     }
     
-    
+//    func delete(item: ToDoListItem) {
+//        let db = Firestore.firestore()
+//        
+//        db.collection("users")
+//            .document(userId)
+//            .collection("todos")
+//            .document(item.id)
+//            .delete()
+//    }
 }
