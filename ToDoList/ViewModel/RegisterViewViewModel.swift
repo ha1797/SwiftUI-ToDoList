@@ -18,6 +18,20 @@ class RegisterViewViewModel: ObservableObject {
     
     init() {}
     
+    func register() {
+        guard validate() else {
+            return
+        }
+        
+        Auth.auth().createUser(withEmail: email, password: password) { [weak self] result, error in
+            guard let userId = result?.user.uid else {
+                return
+            }
+            
+//            self?.insertUserRecord(id: userId);
+        }
+    }
+    
 //    private func insertUserRecord(id: String) {
 //        let newUser = User(id: id, name: fullName, email: email, joined: Date().timeIntervalSince1970)
 //        
