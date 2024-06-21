@@ -34,6 +34,7 @@ struct LoginView: View {
                         action: { viewModel.login() }
                      ).padding()
                 }
+                .offset(y: -50)
                 
                 VStack {
                     Text("New around here?")
