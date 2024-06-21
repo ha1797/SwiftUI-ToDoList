@@ -27,14 +27,11 @@ struct LoginView: View {
                     TextField("Password", text: $viewModel.password)
                         .textFieldStyle(DefaultTextFieldStyle())
                     
-                    // TLButton here once code available
-                    /*
                      TLButton(
-                     title: "Log In",
-                     backgroundColor: .blue
-                     action: { viewModel.login() }
+                        title: "Log In",
+                        backgroundColor: .blue,
+                        action: { viewModel.login() }
                      )
-                     */
                 }
                 
                 VStack {
