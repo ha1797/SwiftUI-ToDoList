@@ -25,7 +25,7 @@ struct LoginView: View {
                     TextField("Email Address", text: $viewModel.email)
                         .textFieldStyle(DefaultTextFieldStyle())
                         .textInputAutocapitalization(.never)
-                    TextField("Password", text: $viewModel.password)
+                    SecureField("Password", text: $viewModel.password)
                         .textFieldStyle(DefaultTextFieldStyle())
                     
                      TLButton(
