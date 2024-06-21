@@ -15,7 +15,7 @@ struct ProfileView: View {
         NavigationStack {
             VStack {
                 if let user = viewModel.user {
-//                    profile(user: user)
+                    profile(user: user)
                 } else {
                     Text("Loading Profile...")
                 }
