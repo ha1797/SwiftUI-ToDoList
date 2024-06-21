@@ -32,7 +32,7 @@ struct LoginView: View {
                         title: "Log In",
                         backgroundColor: .blue,
                         action: { viewModel.login() }
-                     )
+                     ).padding()
                 }
                 
                 VStack {
