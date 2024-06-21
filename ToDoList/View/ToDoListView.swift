@@ -21,17 +21,17 @@ struct ToDoListView: View {
     var body: some View {
         NavigationStack {
             VStack {
-//                List(items) { item in
-//                    ToDoListItemView(item: item)
-//                        .swipeActions(
-//                            content: {
-//                                Button("Delete") {
-//                                    viewModel.delete(item: item)
-//                                }
-//                                .tint(.red)
-//                            })
-//                }
-//                .listStyle(PlainListStyle())
+                List(items) { item in
+                    ToDoListItemView(item: item)
+                        .swipeActions(
+                            content: {
+                                Button("Delete") {
+                                    viewModel.delete(item: item)
+                                }
+                                .tint(.red)
+                            })
+                }
+                .listStyle(PlainListStyle())
             }
             .navigationTitle("To Do List")
             .toolbar {
