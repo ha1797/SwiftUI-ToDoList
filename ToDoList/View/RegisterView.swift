@@ -25,7 +25,7 @@ struct RegisterView: View {
                     .textFieldStyle(DefaultTextFieldStyle())
                 TextField("Email Address", text: $viewModel.email)
                     .textFieldStyle(DefaultTextFieldStyle())
-                TextField("Password", text: $viewModel.password)
+                SecureField("Password", text: $viewModel.password)
                     .textFieldStyle(DefaultTextFieldStyle())
                 
                 TLButton(
