@@ -23,8 +23,10 @@ struct RegisterView: View {
             Form {
                 TextField("Full Name", text: $viewModel.fullName)
                     .textFieldStyle(DefaultTextFieldStyle())
+                    .autocorrectionDisabled()
                 TextField("Email Address", text: $viewModel.email)
                     .textFieldStyle(DefaultTextFieldStyle())
+                    .autocorrectionDisabled()
                 SecureField("Password", text: $viewModel.password)
                     .textFieldStyle(DefaultTextFieldStyle())
                 
