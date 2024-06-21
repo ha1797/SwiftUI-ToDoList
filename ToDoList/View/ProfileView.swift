@@ -65,6 +65,7 @@ struct ProfileView: View {
                 viewModel.logOut()
             }
             .tint(.red)
+            .padding()
             
             Spacer()
         }
