@@ -28,7 +28,7 @@ class RegisterViewViewModel: ObservableObject {
                 return
             }
             
-//            self?.insertUserRecord(id: userId);
+            self?.insertUserRecord(id: userId);
         }
     }
     
