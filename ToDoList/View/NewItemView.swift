@@ -29,7 +29,9 @@ struct NewItemView: View {
                     .datePickerStyle(GraphicalDatePickerStyle())
                 
                 // button
-                TLButton(title: "Save", backgroundColor: .pink) {
+                TLButton(title: "Save", 
+                         backgroundColor: .pink
+                ) {
                     if viewModel.canSave() {
                         viewModel.save()
                         newItemPresented = false
