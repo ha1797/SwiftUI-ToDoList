@@ -26,7 +26,13 @@ class NewItemViewViewModel: ObservableObject {
         
         // create model
         let newId = UUID().uuidString
-        let newModel = ToDoListItem(id: newId, title: title, dueDate: dueDate.timeIntervalSince1970, createdDate: Date().timeIntervalSince1970, isDone: false)
+        let newModel = ToDoListItem(
+            id: newId,
+            title: title,
+            dueDate: dueDate.timeIntervalSince1970,
+            createdDate: Date().timeIntervalSince1970,
+            isDone: false
+        )
         
         // save model
         let db = Firestore.firestore()
