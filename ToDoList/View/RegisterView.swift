@@ -35,7 +35,7 @@ struct RegisterView: View {
                     title: "Create Account",
                     backgroundColor: .green,
                     action: { viewModel.register() }
-                )
+                ).padding()
             }
             
             Spacer()
