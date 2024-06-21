@@ -29,15 +29,15 @@ struct NewItemView: View {
                     .datePickerStyle(GraphicalDatePickerStyle())
                 
                 // button
-//                TLButton(title: "Save", backgroundColor: .pink) {
-//                    if viewModel.canSave() {
-//                        viewModel.save()
-//                        newItemPresented = false
-//                    } else {
-//                        viewModel.showAlert = true
-//                    }
-//                }
-//                .padding()
+                TLButton(title: "Save", backgroundColor: .pink) {
+                    if viewModel.canSave() {
+                        viewModel.save()
+                        newItemPresented = false
+                    } else {
+                        viewModel.showAlert = true
+                    }
+                }
+                .padding()
             }
             .alert(isPresented: $viewModel.showAlert) {
                 Alert(title: Text("Error"),
