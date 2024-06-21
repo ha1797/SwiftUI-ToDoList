@@ -37,6 +37,7 @@ struct RegisterView: View {
                     action: { viewModel.register() }
                 ).padding()
             }
+            .offset(y: -50)
             
             Spacer()
         }
