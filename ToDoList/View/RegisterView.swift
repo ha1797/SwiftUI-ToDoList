@@ -25,11 +25,11 @@ struct RegisterView: View {
                 TextField("Password", text: $viewModel.password)
                     .textFieldStyle(DefaultTextFieldStyle())
                 
-//                TLButton(
-//                    title: "Create Account",
-//                    backgroundColor: .green,
-//                    action: { viewModel.register() }
-//                )
+                TLButton(
+                    title: "Create Account",
+                    backgroundColor: .green,
+                    action: { viewModel.register() }
+                )
             }
             
             Spacer()
